@@ -1,0 +1,184 @@
+/* Основной стиль для body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: url('https://path/to/snowfall-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* Контейнер для всей страницы */
+.app-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Заголовок */
+h1 {
+  color: #ff6f00; /* Оранжевый */
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Стиль для формы поиска */
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  backdrop-filter: blur(5px);
+}
+
+form input,
+form select {
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form input[type="number"] {
+  width: 48%;
+  display: inline-block;
+  margin-right: 4%;
+}
+
+form button {
+  background-color: #ff6f00; 
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e65100;
+}
+
+/* Стиль для карточек подарков */
+.gift-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-image: url('https://path/to/christmas-decor.jpg'); /* Новый год */
+  background-size: cover;
+  background-position: center;
+}
+
+.gift-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gift-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.gift-card h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 10px 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.gift-card p {
+  font-size: 1.1rem;
+  color: #ffeb3b;
+  margin-bottom: 15px;
+}
+
+/* Гирлянда */
+.garland {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  pointer-events: none;
+  background: url('https://path/to/garland-image.gif') repeat-x;
+  background-size: contain;
+  animation: moveGarland 10s linear infinite;
+}
+
+@keyframes moveGarland {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* Снежинки */
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snowflake {
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  opacity: 0.9;
+  animation: snowflakes 10s infinite linear;
+  background-image: url('https://path/to/snowflake-image.png'); /* Снежинки */
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  animation-duration: 10s;
+}
+
+@keyframes snowflakes {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.snowflake:nth-child(odd) {
+  animation-duration: 12s;
+}
+
+.snowflake:nth-child(even) {
+  animation-duration: 15s;
+}
+
+
